@@ -1,0 +1,51 @@
+
+
+.utilityResponsiveSquare{
+  height: 100%;
+  position: relative;
+  align-self: stretch;
+  padding-bottom: 100%;
+  
+}
+.utilityResponsiveSquare_inner{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

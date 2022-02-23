@@ -1,0 +1,158 @@
+.container{
+  height: 100vh;
+  width:  100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 15vh;
+  padding-top: 50px;
+  animation: clipPath 0.5s forwards;
+  z-index: 20;
+  
+  /* mix-blend-mode: difference ; */
+ /* backdrop-filter: invert(100%) /*hue-rotate(180deg);*/
+
+  
+}
+.container::before{
+  content:"";
+  position: absolute;
+  top: 0;
+  bottom:0;
+  right: 0;
+  left: 0;
+  opacity: 0.75;
+  background: var(--clr-primary) ;
+  /*filter:  hue-rotate(180deg)  ;*/
+  
+}
+
+.link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*margin-block: 10vh;*/
+  width: 100vw;
+  height: 5em;
+  color: var(--clr-text);
+  z-index: 60;
+  background: transparent; /*var(--clr-accent);*/
+  font-family: var(--ff-primary) ;
+  font-weight: black;
+  font-size: 1.5em;
+  text-align: center;
+ /* letter-spacing: .5em;*/
+ 
+  background: transparent;
+  transition: all 0.5s ease-in-out;
+  
+  text-shadow: 0px 3px 5px black;
+}
+.link::before{
+  content: attr(name) ;
+  height: inherit;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700 ;
+  opacity: 0;
+  color: rgba(0,0,0,0.3);
+  z-index: -1;
+  letter-spacing: 0.5em;
+  transition: 0.5s ease;
+  text-shadow: none ;
+  background: linear-gradient(to bottom,transparent,var(--clr-accent),transparent);
+
+}
+.link:hover{
+  transform: scale(1.25);
+  
+}
+.link:hover::before{
+  
+  letter-spacing: 0.1em;
+  opacity: 1;
+  
+}
+.linkBtn{
+  background: transparent;
+  
+}
+.socialLinksContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-block: 5vh;
+  z-index: 2;
+}
+.socialLinks:hover{
+  opacity: 0.5;
+}
+
+@keyframes clipPath{
+ from{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0);
+  
+ }
+ /*
+ 50%{
+   clip-path: polygon(0 0, 100% 0, 51% 100%, 50% 100%);
+ }
+ */
+ to{
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+}
+}
+
+
+@media (min-width:60em) { 
+  .container{
+    padding-block: 0px;
+    padding-top: 50px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************************************************************************************/

@@ -1,0 +1,32 @@
+
+#navContainer{
+  background-color: var(--clr-primary) ;
+  box-shadow: var(--box-shadow);
+  
+  
+}
+.brgMenu{
+  max-height: 50px;
+  max-width: 50px;
+  z-index: 100;
+}
+.link{
+  font-size: 10px;
+  background: dodgerblue ;
+  
+}
+
+@media (min-width:60em) { 
+ .burgerContainer{
+   display: none;
+ }
+ .linksContainer{
+   display: flex;
+ }
+}
+
+
+
+
+
+/******************************************************************************************************************/

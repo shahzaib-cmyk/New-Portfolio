@@ -1,0 +1,82 @@
+.textContainer{
+  --angle : 45deg ;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0.5;
+  
+  /* filter: blur(1px);*/
+}
+
+.text{
+  --translation:0%;
+  transform: translate(var(--translation),var(--translation))  rotate(var(--angle)) scale(3);
+  font-size: 2.5em;
+  margin-block: 1.15em;
+  color: var(--clr-primary);
+  text-shadow: 3px 1px 3px black;
+  transition: all 0.5s ease;
+  font-family: "Poppins";
+  font-weight: 900 ;
+  width: max-content;
+  outline: 1px solid white;
+}
+.clr-primary{
+  color: var(--clr-primary);
+}
+.clr-secondary{
+  color: var(--clr-secondary);
+}
+.clr-accent{
+  color: var(--clr-accent);
+}
+/*
+.text:nth-child(2n+1){
+  --translation: -100%;
+  
+}
+.text:nth-child(2n){
+  --translation: 100%;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

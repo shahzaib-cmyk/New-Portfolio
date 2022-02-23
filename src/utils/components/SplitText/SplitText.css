@@ -1,0 +1,60 @@
+.letter{
+  transition-property: opacity transform ; 
+  display: inline-block;  
+  opacity: 0;
+}
+/*   odd   */
+.odd{
+  transform: rotate(45deg) translateY(100%)
+  
+}
+/*   even   */
+.even{
+  transform: rotate(-45deg) translateY(-100%)
+  
+}
+.space{
+  background: crimson;
+  width:1ch; /*1em; */
+}
+.bruh{
+  transform: rotate(0deg);
+  opacity: 1;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************************************************************************************************/

@@ -1,11 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul{
+  text-decoration: none;
+}
+li{
+  text-decoration: none;
+}
+html{
+  scroll-behavior: smooth;
+}
 .App {
-  text-align: center;
+  /*text-align: center;*/
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: crimson;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+:root{
+  /*      MAIN COLOR    */
+  --clr-primary: hsla(218.2,24.4%,8.8%,1) ;
+  --clr-secondary: hsla(160.7,34.1%,66.1%,1) ;
+  --clr-accent: hsla(0,59.5%,49.4%,1) ;
+  --clr-text  : hsla(0,0%,91.4%,0.95) ;
+  /*      GENERAL      */
+  --margin-main : 5vw ;
+  --box-shadow  : 0px 2px 5px rgba(0,0,0,0.454);
+  /*      FONTS     */
+  --ff-primary: 'Poppins', sans-serif ;
+  --ff-headings: 'Playfair Display', serif ;
+  --ff-paras: 'Poppins', sans-serif; 
+  
+  --fz-headings: clamp(1rem,8vw,3rem);
+  --fz-paragraphs: clamp(0.75rem,2.5vw,1rem);
+  
+  /*     BOX SHADOWS    */
+  --box-shadow-candle : #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0);
+  --box-shadow-pile : 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0,0,0,0);
+  
+}
+
+/**     GENERAL CLASSES    */
+.primary{
+  background: var(--clr-primary);
+}
+.secondary{
+  background: var(--clr-secondary);
+}
+.accent{
+  background: var(--clr-accent);
+}
+.text{
+  color: var(--clr-text);
+}
+
+
+/*     GLOBAL STYLES   */
+p{
+  line-height: 1.6em ;
+  font-family: var(--ff-primary);
+  font-size: var(--fz-paragraphs);
+  color: var(--clr-text);
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--ff-headings);
+  font-size: var(--fz-headings);
+  color: var(--clr-text);
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,20 +85,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {

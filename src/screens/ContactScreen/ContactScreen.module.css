@@ -1,0 +1,70 @@
+.screenContainer{
+  height: 100vh;
+  width: 100%;
+  background: rvar(--clr-accent) ;
+  position: relative;
+  
+  padding-inline: var(--margin-main);
+  padding-block : 10px ;
+  
+}
+.screenBody{
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+.screenBody > *{
+  flex: 1;
+  padding: 1rem ;
+}
+.column1{
+  background: limegreen ;
+}
+.column2{
+  background: dodgerblue ;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:60em){ 
+ .screenBody{
+   flex-direction: row;
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

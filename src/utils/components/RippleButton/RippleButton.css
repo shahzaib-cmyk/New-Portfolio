@@ -1,0 +1,55 @@
+
+.utilityRippleButton{
+  position: relative;
+  overflow: hidden;
+
+
+}
+.utilityRippleButtonExpandingCircle{
+  --expandingCircleSize: 50;
+  position: absolute;
+  top: 0;
+  left:0;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  transition-property: transform, opacity;
+  opacity: 0;
+}
+.expandingCircle_held{
+  transform: scale(var(--expandingCircleSize));
+  opacity: 0.7;
+}
+.expandingCircle_released{
+  opacity:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
