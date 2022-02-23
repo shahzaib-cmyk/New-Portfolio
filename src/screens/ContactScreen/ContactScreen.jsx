@@ -8,7 +8,7 @@ function ContactScreen(props) {
   } = props;
   return (
     <div id="Contact" style={style} className={styles.screenContainer} >
-      <DiagonalBgText invert style={{ textShadow: `-3px 1px 3px black` }} color="accent" className={styles.bgText} />
+      <DiagonalBgText className={styles.bgText} invert style={{ textShadow: `-3px 1px 3px black` }} color="accent" className={styles.bgText} />
       <div className={styles.screenBody}  >   
         <div className={styles.column1}   > 
         

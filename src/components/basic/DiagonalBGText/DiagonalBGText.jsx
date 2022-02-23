@@ -29,6 +29,7 @@ function DiagonalBGText({
     setOnScreen(()=>true)
   }, [] )
   
+  
   const calculatedAngle = useMemo(()=>{
     console.log("DiagonalBGText angle recalculated");
     const adjacent = window.innerWidth;
@@ -40,7 +41,7 @@ function DiagonalBGText({
       angleDeg *= -1;
     }
     angleDeg < 0 ? angleDeg +=10 : angleDeg -=10
-    return (angleDeg)+"deg"
+    return angleDeg+"deg"
     
   }, [ window.innerHeight, window.innerWidth] )
   
@@ -48,6 +49,7 @@ function DiagonalBGText({
   
   return (
     <div 
+    {...rest} 
      style={{ [`--angle`]: calculatedAngle  , }}
      className={`${styles.textContainer} ${className}`}
     >

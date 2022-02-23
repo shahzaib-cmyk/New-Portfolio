@@ -12,13 +12,16 @@ import {
 import {
   Nav
 } from "components/shared"
-
+import {
+  SettingsContextProvider,
+} from "data/contexts"
 
 eruda.init()
 
 function App() {
   
   return (
+    <SettingsContextProvider >
     <div className="App">
       {/*<Nav links={[ "Home", "Projects", "Contact" ]} />
       */}
@@ -27,6 +30,7 @@ function App() {
       <ContactScreen />
       <Footer />
     </div>
+    </SettingsContextProvider>
   );
 }
 

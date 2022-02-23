@@ -9,6 +9,27 @@
   background-color: var(--clr-primary);
   
   
+  border-bottom-left-radius: var(--curve) ;
+  
+  
+  
+}
+
+.screenContainer::before{
+  content:"";
+  position: absolute;
+  height: 200%;
+  width: 50%;
+  top: 0;
+  right: 0;
+  background:  var(--clr-primary); 
+  
+  
+}
+
+.bgText{
+  border-bottom-left-radius: var(--curve) ;
+  overflow: hidden;
   
 }
 .screenBody{
@@ -23,6 +44,7 @@
   overflow: hidden ;
   z-index: 4;
   padding-top: 50px ;
+  
   
   
   

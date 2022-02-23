@@ -10,7 +10,27 @@
   padding-block: 10px ;
   padding-inline: var(--margin-main) ;
   
+  border-top-right-radius: var(--curve);
+  border-bottom-right-radius: var(--curve);
+  
+  
+  
+
+  
 }
+.screenContainer::before{
+  content:"";
+  position: absolute;
+  height: 200%;
+  width: 50%;
+  top: -50% ;
+  left: 0;
+  background:  var(--clr-secondary); 
+  z-index: -1;
+  
+}
+
+
 h1{
   color: var(--clr-primary);
 }

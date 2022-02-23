@@ -20,7 +20,8 @@ html{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: crimson;
+  /*background: var(--clr-accent);*/
+  
 }
 
 .App-logo {
@@ -36,12 +37,13 @@ html{
   /*      GENERAL      */
   --margin-main : 5vw ;
   --box-shadow  : 0px 2px 5px rgba(0,0,0,0.454);
+  --curve :  65px  ;
   /*      FONTS     */
   --ff-primary: 'Poppins', sans-serif ;
   --ff-headings: 'Playfair Display', serif ;
   --ff-paras: 'Poppins', sans-serif; 
   
-  --fz-headings: clamp(1rem,8vw,3rem);
+  --fz-headings: clamp(1rem,8vw,2rem);
   --fz-paragraphs: clamp(0.75rem,2.5vw,1rem);
   
   /*     BOX SHADOWS    */
@@ -78,6 +80,20 @@ h1,h2,h3,h4,h5,h6{
   color: var(--clr-text);
 }
 
+/*   Curvy sections   */
+/*
+.App > *:nth-child(2n+1){
+  border-bottom-left-radius: var(--curve) ;
+}
+
+.App > :last-child{
+  border-bottom-left-radius: 0px   ;
+}
+
+.App > *:nth-child(2){
+  border: 1px solid blue;
+}
+*/
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

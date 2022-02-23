@@ -34,7 +34,7 @@ function LandingScreen(props) {
   return (
     <div id="Home" style={style} className={styles.screenContainer} >
           <Nav links={[ "Home", "Projects", "Contact",]} />
-          <DiagonalBgText />
+          <DiagonalBgText className={styles.bgText} />
           <div className={styles.screenBody}   >   
           <div className={styles.textContainer}   >   
             <h1 className={styles.headings} > I'm Shahzaib Khan</h1>
