@@ -21,14 +21,15 @@ import {
 } from "data/contexts"
 
 eruda.init()
-/*
+
 const ProjectsScreen = lazy(()=>import("./screens/ProjectsScreen/ProjectsScreen.jsx"));
-*/
+
+/*
 const ProjectsScreen = lazy(()=>{
   return new Promise(resolve=>setTimeout(resolve,5*1000)).then(
   ()=> import("./screens/ProjectsScreen/ProjectsScreen.jsx"));
   });
-
+*/
 
 const ContactScreen = lazy(()=>import("./screens/ContactScreen/ContactScreen.jsx"));
 
