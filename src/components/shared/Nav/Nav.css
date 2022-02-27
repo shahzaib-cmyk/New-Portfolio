@@ -2,7 +2,10 @@
 #navContainer{
   background-color: var(--clr-primary) ;
   box-shadow: var(--box-shadow);
-  
+  /*background: transparent ; /*rgba(255,255,255,0.5);
+  */
+  /*backdrop-filter: invert(100%);*/
+ /* mix-blend-mode: multiply ;*/
   
 }
 .brgMenu{

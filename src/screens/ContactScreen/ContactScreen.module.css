@@ -38,12 +38,13 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 5px;
+  
 }
 .screenBody > *{
   flex: 1;
   padding: 1rem ;
-  backdrop-filter: blur(3.5px) ;
-  background:  hsla(0,0%,100%,0.188)  ;
+  backdrop-filter: blur(3px) ;
+  background:  linear-gradient(to bottom right,hsla(0,0%,100%,0.3) 25%,transparent) ;
   border-radius: 5px ;
   border: 1px solid hsla(0,0%,100%,0.188) ;
   border-top-color: hsla(0,0%,100%,1) ;

@@ -17,7 +17,9 @@ function getClassBasedOnProps(props) {
          text ? "text" : ""))
 }
 
-
+function randomNumber(min,max) {
+  return Math.floor(Math.random()*(max-min+1)) + min
+}
 
 
 
@@ -35,6 +37,7 @@ function getClassBasedOnProps(props) {
 export {
   getClassBasedOnProps,
   absoluteFill,
+  randomNumber,
 }
 
 

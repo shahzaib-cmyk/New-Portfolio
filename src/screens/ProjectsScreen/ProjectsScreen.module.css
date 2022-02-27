@@ -13,6 +13,7 @@
   border-top-right-radius: var(--curve);
   border-bottom-right-radius: var(--curve);
   
+  padding-bottom: calc(var(--curve) * .5);
   
   
 
@@ -33,6 +34,7 @@
 
 h1{
   color: var(--clr-primary);
+  z-index: 1;
 }
 .projectsGrid {
   align-self: stretch ;
@@ -42,10 +44,13 @@ h1{
   grid-auto-flow: dense;
   gap: 5px ;
   padding: 10px ;
+  z-index: 1;
+  
 }
 .projectsGrid > *{
-  background: black ;
   border-radius: 5px;
+  backdrop-filter: blur(2px);
+  background: linear-gradient(to bottom right,rgba(255,255,255,0.609),transparent) ;
 }
 
 

@@ -6,12 +6,11 @@ import {
 } from "utils/hooks"
 
 const strings = [
+  "React",
   "Web development",
-  "Portfolio",
   "Shahzaib Khan",
-  "Web development",
+  "React Native",
   "Web Design",
-  "Blogs",
   "Portfolio",
   "Shahzaib Khan",
   ]

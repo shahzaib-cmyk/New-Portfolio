@@ -1,9 +1,13 @@
 .links{
   display: block;
-  
-  
-}
+  transition-property: scale opacity;
+  transition-duration: 0.5s;
 
+}
+.links:hover,.links:focus{
+  opacity: 0.5;
+  transform: scale(1.15);
+}
 
 
 

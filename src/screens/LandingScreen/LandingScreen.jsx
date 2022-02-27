@@ -1,4 +1,7 @@
 import { useRef } from "react"
+/*
+import "../../App.css"
+*/
 import styles from './LandingScreen.module.css';
 import {
   Nav 
@@ -32,16 +35,18 @@ function LandingScreen(props) {
   
 
   return (
-    <div id="Home" style={style} className={styles.screenContainer} >
+    <div id="Home" style={style} className={`${styles.screenContainer}`} >
           <Nav links={[ "Home", "Projects", "Contact",]} />
           <DiagonalBgText className={styles.bgText} />
           <div className={styles.screenBody}   >   
-          <div className={styles.textContainer}   >   
-            <h1 className={styles.headings} > I'm Shahzaib Khan</h1>
-            <div className={styles.line} />
-            <p className={styles.paras} >I Design and Develop Beautifull Web Experiences</p>
+          <div className={`${styles.textContainer}`}   >   
+            <h1 className={`${styles.headings}`} >Hello,
+            I'm <br /> Shahzaib Khan</h1>
+            <p className={`${styles.paras} fadeIn_bottom`} >I Design and Develop Beautifull Animated <br />Web Experiences</p>
           </div>
-          <img className={styles.image} src={portrait} />
+          <div className={`${styles.imgContainer} fadeIn_center`}   >   
+            <img className={styles.image} src={portrait} />
+          </div>
           { /*
             <MovableBox ref={e=>{
               temRef.current=e
