@@ -4,14 +4,16 @@
   top: 0;
   left: 0;
   border-radius: 50% ;
+  background: var(--clr-accent);
 }
+/*
 .circles:nth-child(2n){
   background: var(--clr-primary);
 }
 .circles:nth-child(2n+1){
   background: var(--clr-accent);
 }
-
+*/
 
 
 

@@ -32,7 +32,8 @@ html{
   --opacity-accent :1 ;
   /*      MAIN COLOR    */
   --clr-primary: hsla(218.2,24.4%,8.8%,1) ;
-  --clr-secondary: hsla(160.7,34.1%,66.1%,1) ;
+  /* --clr-secondary: hsla(160.7,34.1%,66.1%,1) ;
+  */--clr-secondary: rgb(103,181,255) ;
   --clr-accent: hsla(0,59.5%,49.4%,var(--opacity-accent)) ;
   --clr-text  : hsla(0,0%,91.4%,0.95) ;
   /*      GENERAL      */
@@ -40,12 +41,11 @@ html{
   --box-shadow  : 0px 2px 5px rgba(0,0,0,0.454);
   --curve :  65px  ;
   /*      FONTS     */
-  --ff-primary: 'Poppins', sans-serif ;
-  --ff-headings: 'Playfair Display', serif ;
-  --ff-paras: 'Poppins', sans-serif; 
+  --ff-primary: 'Playfair Display', serif ;
+  --ff-secondary: 'Poppins', sans-serif; 
   
   --fz-headings: clamp(1rem,8vw,2rem);
-  --fz-paragraphs: clamp(0.75rem,2.5vw,1rem);
+  --fz-paras: clamp(0.75rem,2.5vw,1rem);
   
   /*     BOX SHADOWS    */
   --box-shadow-candle : #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0);
@@ -71,12 +71,12 @@ html{
 /*     GLOBAL STYLES   */
 p{
   line-height: 1.6em ;
-  font-family: var(--ff-primary);
-  font-size: var(--fz-paragraphs);
+  font-family: var(--ff-secondary);
+  font-size: var(--fz-paras);
   color: var(--clr-text);
 }
 h1,h2,h3,h4,h5,h6{
-  font-family: var(--ff-headings);
+  font-family: var(--ff-primary);
   font-size: var(--fz-headings);
   color: var(--clr-text);
 }
@@ -98,10 +98,10 @@ h1,h2,h3,h4,h5,h6{
   transform: scale(1.15);
 }
 .fadeIn_bottom{ 
-  animation: fadeinBottom 1.5s ease; 
+  animation: fadeinBottom 1s ease forwards; 
 }
 .fadeIn_center{ 
-  animation: fadeInCenter 1.5s ; 
+  animation: fadeInCenter 1s ease forwards; 
 }
 
 /*       Animations        */
@@ -118,7 +118,7 @@ h1,h2,h3,h4,h5,h6{
 }
 @keyframes fadeinBottom {
   0%{
-    transform: translateY(50%); 
+    transform: translateY(35%); 
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
     opacity: 0.7;
   }

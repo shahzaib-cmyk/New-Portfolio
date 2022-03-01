@@ -23,11 +23,12 @@ function DiagonalBGText({
     invert=false,
     ...rest
 }) {
+  /*
   const [ onScreen, setOnScreen ] = useState(()=>false);
   useEffect(()=>{
     setOnScreen(()=>true)
   }, [] )
-  
+  */
   
   const calculatedAngle = useMemo(()=>{
     console.log("DiagonalBGText angle recalculated");
@@ -42,7 +43,7 @@ function DiagonalBGText({
     angleDeg < 0 ? angleDeg +=10 : angleDeg -=10
     return angleDeg+"deg"
     
-  }, [ window.innerHeight, window.innerWidth] )
+  }, [] )
   
   
   

@@ -41,7 +41,7 @@
   color: var(--clr-text);
   z-index: 60;
   background: transparent; /*var(--clr-accent);*/
-  font-family: var(--ff-primary) ;
+  font-family: var(--ff-secondary) ;
   font-weight: black;
   font-size: 1.5em;
   text-align: center;

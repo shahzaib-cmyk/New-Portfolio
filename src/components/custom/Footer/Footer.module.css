@@ -4,16 +4,19 @@
   display: flex;
  /* align-items: center;*/
   padding-inline: var(--margin-main);
+  padding-block: 10px ;
   justify-content: space-around;
  /* background: hsla(0,12%,9.2%,0.999);*/
   background: var(--clr-primary);
   flex-direction: column;
+  
 }
 .container > *{
   flex:1;
 }
 .column2{
   flex-direction: column;
+  align-items: center;
 }
 .headings{
    padding: 0.2em;
@@ -51,7 +54,21 @@
   width: 100%;
 }
 
-
+.codeLinkContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex:1;
+}
+.codeLinkContainer p{
+  padding: .5em;
+}
+.codeLink{
+  background: var(--clr-accent);
+  padding: 15% ;
+  border-radius: 50% ;
+}
 
 
 

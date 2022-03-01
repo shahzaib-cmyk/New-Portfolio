@@ -1,6 +1,6 @@
 import styles from "./SocialLinks.module.css";
 import { memo, useMemo, } from "react";
-import { FaFacebook, FaLinkedinIn, FaTwitter, FaInstagram, } from 'react-icons/fa';
+import { FaFacebook, FaLinkedinIn, FaGithub, FaTwitter, FaInstagram, } from 'react-icons/fa';
 import { v4 as uuidv4 } from "uuid";
 import {
   TouchableOpacity
@@ -27,15 +27,20 @@ const AvailableOptions = [
     icon: FaLinkedinIn ,
     link: "https://www.linkedin.com/in/shahzaib-khan-44248a225"
   },
+  {
+    name:"Github",
+    icon: FaGithub ,
+    link: "https://github.com/shahzaib-cmyk"
+  },
   
 ]
 
 function SocialLinks({
     style,
-    className="",
     links="all",
     ...rest
 }) {
+  
   const iconsToShow = useMemo(()=>{
     if (links==="all") return AvailableOptions;
     if (!(Array.isArray(links))) throw "links prop needs to be an array in SocialLinks"
@@ -44,7 +49,7 @@ function SocialLinks({
       const requested = links.find(l=>l===option.name)
       return requested;
     })
-      
+  
   },[ links ])
   
   

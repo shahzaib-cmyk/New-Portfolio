@@ -22,7 +22,22 @@ function randomNumber(min,max) {
 }
 
 
+function select(arg={}) {
+  const { dev, prod } = arg;
+  if (!dev || !prod) throw "False args provided to select utility function"
+  return isProduction()
+       ? prod
+       : dev;
+}
 
+function isProduction() {
+  return process.env.NODE_ENV === "production";
+}
+function onlyInDevelopment(cb) {
+  return !isProduction()
+       ? cb?.()
+       : null;
+}
 
 
 
@@ -38,6 +53,9 @@ export {
   getClassBasedOnProps,
   absoluteFill,
   randomNumber,
+  onlyInDevelopment,
+  isProduction,
+  select,
 }
 
 

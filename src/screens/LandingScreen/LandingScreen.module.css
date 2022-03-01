@@ -61,7 +61,8 @@
   align-self: stretch;
   flex: 1;
   
-  padding-block: 2rem;
+  padding-top: 2rem;
+  
   padding-inline: 1.5rem;
   backdrop-filter: blur(4px) /* invert(100%) */ ;
   /*background: linear-gradient(to bottom right,var(--clr-secondary),transparent 30%);

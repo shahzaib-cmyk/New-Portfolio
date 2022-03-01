@@ -35,8 +35,8 @@ function LandingScreen(props) {
   
 
   return (
-    <div id="Home" style={style} className={`${styles.screenContainer}`} >
-          <Nav links={[ "Home", "Projects", "Contact",]} />
+    <section id="Home" style={style} className={`${styles.screenContainer}`} >
+          <Nav links={[ "Home", "About Me", "Projects", "Contact",]} />
           <DiagonalBgText className={styles.bgText} />
           <div className={styles.screenBody}   >   
           <div className={`${styles.textContainer}`}   >   
@@ -47,15 +47,9 @@ function LandingScreen(props) {
           <div className={`${styles.imgContainer} fadeIn_center`}   >   
             <img className={styles.image} src={portrait} />
           </div>
-          { /*
-            <MovableBox ref={e=>{
-              temRef.current=e
-            }} position={{ right:10, top:0}} >
-               <BurgerMenuToggle lineColor="white" style={{  height:50,width:50, borderRadius:"50%", }} />
-            </MovableBox>
-          */ }
+
           </div>
-    </div>
+    </section>
   );
 }
 

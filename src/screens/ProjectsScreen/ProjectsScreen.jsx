@@ -3,25 +3,95 @@ import {
   DiagonalBgText,
   RandomBalls,
 } from "components/basic";
+import {
+  ProjectsGrid
+} from "components/custom"
+import { v4 as uuidv4 } from "uuid";
+import { useInView } from 'react-intersection-observer';
+import AppImage from "assets/Zarqoon_app_image.jpg";
 
+/*
+const Projects = [
+  {
+    name: "Name",
+    description:"A really long description about the project explaining a bunch of stuff about the project ",
+    Component: TestComp,
+    link:"https://www.google.com",
+  },
+  {
+    name: "Name",
+    description:"Some description about the project",
+    Component: TestComp,
+    link:"https://www.google.com",
+  },
+  {
+    name: "Name",
+    description:"Some description about the project",
+    Component: TestComp,
+    link:"https://www.google.com",
+  },
+  
+]
+  */
 function ProjectsScreen(props) {
   const {
     style,
   } = props;
+  
+  const { ref, inView, entry } = useInView();
+  
+  
   return (
-    <div id="Projects" style={style} className={styles.screenContainer} >
-      <h1>Projects</h1>
-      <RandomBalls />
-      <div className={styles.projectsGrid}  >   
-       <div />
-       <div />
-       <div />
-       <div />
-       <div />
-       <div />
+    <section id="Projects" ref={ref} style={style} className={styles.screenContainer} >
+      <h1 className={`${styles.headingOpen} ${inView ? "fadeIn_bottom" : "" }`}>Projects</h1>
+     {/* <RandomBalls />  */ }
+      <ProjectsGrid />
+     {/*
+      <div className={styles.projectsGrid} >   
+       {
+         Projects.map((project,index)=>{
+           const { Component, link, name, description } = project;
+           console.log("Project component reendered");
+           return (
+             <a 
+              href={link}
+              target="_blank"
+              key={uuidv4()} 
+              className={`${styles.projectContainer}`} 
+              description={description}
+              index={index+1} >
+              <Component />
+             </a>
+           )
+         })
+       }
       </div>
-    </div>
+      */}
+    </section>
   );
 }
+/*
+function LinkHOC(Component,link) {
+  return (props)=>{
+    return (
+      <a 
+        href={link}
+        target="_blank"
+        key={uuidv4()} 
+        className={`${styles.projectContainer}`} 
+        description={description}
+        index={index+1} >
+        <Component {...props} />
+       </a>
+    )
+  }
+}*/
+
+
+
+function TestComp (props){
+  return <img style={{height:"100%",}} src={AppImage}  />
+}
+
 
 export default ProjectsScreen;

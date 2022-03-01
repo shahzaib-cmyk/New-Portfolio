@@ -8,7 +8,8 @@ import {
   ContactScreen,*/
 } from "./screens";
 import {
-  randomNumber
+  randomNumber,
+  onlyInDevelopment,
 } from "utils/functions"
 import {
   Footer
@@ -20,7 +21,10 @@ import {
   SettingsContextProvider,
 } from "data/contexts"
 
-eruda.init()
+onlyInDevelopment(()=>{
+  eruda.init();
+  console.log("Running in development mode");
+})
 
 const ProjectsScreen = lazy(()=>import("./screens/ProjectsScreen/ProjectsScreen.jsx"));
 
@@ -37,16 +41,14 @@ function App() {
   
   return (
     <SettingsContextProvider >
-    <div className="App">
-      {/*<Nav links={[ "Home", "Projects", "Contact" ]} />
-      */}
-      <LandingScreen />
-      <Suspense fallback={<Fallback />} >
-        <ProjectsScreen />
-        <ContactScreen />
-      </Suspense>
-      <Footer />
-    </div>
+      <div className="App">
+        <LandingScreen />
+        <Suspense fallback={<Fallback />} >
+          <ProjectsScreen />
+          <ContactScreen />
+        </Suspense>
+        <Footer />
+      </div>
     </SettingsContextProvider>
   );
 }
