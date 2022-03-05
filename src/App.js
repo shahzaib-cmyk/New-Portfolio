@@ -1,6 +1,5 @@
 import './App.css';
-import './App.css';
-import { useEffect, lazy, Suspense } from "react";
+import { useEffect, useRef, lazy, Suspense } from "react";
 import eruda from "eruda"
 import {
   LandingScreen,
@@ -20,6 +19,7 @@ import {
 import {
   SettingsContextProvider,
 } from "data/contexts"
+//import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 
 onlyInDevelopment(()=>{
   eruda.init();
@@ -39,9 +39,10 @@ const ContactScreen = lazy(()=>import("./screens/ContactScreen/ContactScreen.jsx
 
 function App() {
   
+  const containerRef = useRef(null)
   return (
     <SettingsContextProvider >
-      <div className="App">
+      <div data-scroll-container ref={containerRef} className="App">
         <LandingScreen />
         <Suspense fallback={<Fallback />} >
           <ProjectsScreen />

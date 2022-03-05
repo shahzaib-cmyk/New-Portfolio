@@ -23,7 +23,9 @@ import {
   DiagonalBgText,
 } from "components/basic"
 import portrait from "assets/portraitPicSquare.png"
-
+import {
+  ImagesSphere,
+} from "components/custom"
 
 function LandingScreen(props) {
   const {
@@ -35,8 +37,8 @@ function LandingScreen(props) {
   
 
   return (
-    <section id="Home" style={style} className={`${styles.screenContainer}`} >
-          <Nav links={[ "Home", "About Me", "Projects", "Contact",]} />
+    <section data-scroll-section id="Home" style={style} className={`${styles.screenContainer}`} >
+          <Nav links={[ "Home", /*"About Me", */"Projects", "Contact",]} />
           <DiagonalBgText className={styles.bgText} />
           <div className={styles.screenBody}   >   
           <div className={`${styles.textContainer}`}   >   
@@ -44,10 +46,12 @@ function LandingScreen(props) {
             I'm <br /> Shahzaib Khan</h1>
             <p className={`${styles.paras} fadeIn_bottom`} >I Design and Develop Beautifull Animated <br />Web Experiences</p>
           </div>
+          
           <div className={`${styles.imgContainer} fadeIn_center`}   >   
             <img className={styles.image} src={portrait} />
           </div>
-
+          
+         {/* <ImagesSphere /> */}
           </div>
     </section>
   );

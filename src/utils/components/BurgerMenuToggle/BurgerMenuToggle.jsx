@@ -26,7 +26,7 @@ function BurgerMenuToggle(
   }) {
   
   const [ open , setOpen ] = useState(()=>false);
-  
+  //console.log(`open : ${open}`);
   useEffect(() => {
      onChange && onChange(open);
   } , [open] )

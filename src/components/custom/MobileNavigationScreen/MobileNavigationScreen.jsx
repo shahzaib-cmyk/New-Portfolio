@@ -19,39 +19,45 @@ function MobileNavigationScreen({
     isNavOpen,
   ...rest
 }) {
-  const [ visible, setVisible ] = useState(()=>false);
+  const [ visible, setVisible ] = useState(()=>isNavOpen);
   
   
   useEffect(() => {
-     if(isNavOpen){
+    /* if(isNavOpen){
        setVisible(p=>true);
        /// In Animation stuff
      }
-     if (!isNavOpen) {
+     else if (!isNavOpen) {
        /// Out Animation stuff
        setVisible(p=>false);
-     }
+     }*/
+     setVisible(p=>isNavOpen)
   } , [ isNavOpen ] )
   
-  if (!visible) return null;
+  //if (!visible) return null;
     
   return (
     <div 
       style={style}
-      className={`${styles.container} ${visible ? "container_open" : ""} ${className}`}
+      className={`${styles.container} ${!isNavOpen ? styles.container_closed : ""} ${className}`}
     >
     { links.map((link,index)=>{
-        /* <a name={link}  href={`#${link}`} className={styles.link}  >
-         <Button onClick={()=>window.scrollTo(200,200)} name={link} onClickAnimation="opacity" className={styles.linkBtn} /* className={`${styles.link}`}  key={uuidv4()} >
-        /*   {link} 
-         </Button>
-         </a> */
-         function scrollTo(i){
-           window.location.hash=link;
-        //   window.scrollTo(0,window.innerHeight*i+50);
-         }
+
+       console.log(`visible : ${isNavOpen}`);
+       function scrollTo(i){
+          window.location.hash=link;
+       }
+       
        return (
-         <Button onClick={()=>scrollTo(index)} name={link} onClickAnimation="opacity"  className={`${styles.link}`}  key={uuidv4()} >
+         <Button 
+            onClick={()=>scrollTo(index)}
+            name={link} 
+            onClickAnimation="opacity" 
+            style={{
+              animationDelay:(((index+1)*50)+150)+"ms"
+            }}
+            className={`fadeIn_bottom ${styles.link} ${""/*isNavOpen ? styles.link_open : styles.link_closed */}`} 
+            key={uuidv4()} >
            {link} 
          </Button>
        )

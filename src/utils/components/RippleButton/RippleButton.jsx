@@ -18,7 +18,7 @@ function RippleButton({
     onTouchStart,
     onTouchEnd,
     findOriginOnTouch=false,
-    scale=40,
+    scale=2,
     rippleColor="crimson",
     ...rest
 }) {

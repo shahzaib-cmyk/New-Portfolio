@@ -9,7 +9,12 @@
  /* background: hsla(0,12%,9.2%,0.999);*/
   background: var(--clr-primary);
   flex-direction: column;
-  
+  /*
+  transform: translateY(-25%);
+
+  border-top-right-radius: var(--curve) ;
+  border-top-left-radius: var(--curve) ;
+  */
 }
 .container > *{
   flex:1;

@@ -10,35 +10,15 @@ import { v4 as uuidv4 } from "uuid";
 import { useInView } from 'react-intersection-observer';
 import AppImage from "assets/Zarqoon_app_image.jpg";
 
-/*
-const Projects = [
-  {
-    name: "Name",
-    description:"A really long description about the project explaining a bunch of stuff about the project ",
-    Component: TestComp,
-    link:"https://www.google.com",
-  },
-  {
-    name: "Name",
-    description:"Some description about the project",
-    Component: TestComp,
-    link:"https://www.google.com",
-  },
-  {
-    name: "Name",
-    description:"Some description about the project",
-    Component: TestComp,
-    link:"https://www.google.com",
-  },
-  
-]
-  */
+
 function ProjectsScreen(props) {
   const {
     style,
   } = props;
   
-  const { ref, inView, entry } = useInView();
+  const { ref, inView, entry } = useInView({
+    threshold:"0.25",
+  });
   
   
   return (

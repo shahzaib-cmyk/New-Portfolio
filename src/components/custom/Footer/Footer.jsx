@@ -18,12 +18,15 @@ function Footer(props) {
   } = props;
   
   const [ settings ] = useSettings();
-  const { ref, inView, entry } = useInView();
+  const { ref, inView, entry } = useInView({
+    threshold:"0.5",
+  });
   
   
   return (
     <div ref={ref} style={style} className={`${styles.container} ${className}`}
     >
+    {/*
     <div className={styles.column1}   >
       <div className={styles.emailAndPhoneContainer}   >   
          <h3 className={styles.headings} >E-mail</h3>
@@ -32,15 +35,16 @@ function Footer(props) {
          <p className={styles.paras}>+923451358620</p>
       </div>
     </div>
+    */}
     <div className={styles.column2}   >   
       <div className={styles.socialsContainer}   >   
-         <SocialLinks color={settings.colors.accent} className={`${styles.socialLinks} ${inView ? "fadeIn_bottom" : "" }`}/>
+         <SocialLinks color={settings.colors.accent} className={`${styles.socialLinks} ${inView ? "fadeIn_bottom" : "hide" }`}/>
       </div>
       <div className={`${styles.codeLinkContainer}`}   >   
-      <p>The Code for this Site {inView ? "inView" :"isjj"}</p>
+      <p>The Code for this Site</p>
       <TouchableOpacity >
         <a style={{ display:"block" }} href="https://github.com/shahzaib-cmyk/New-Portfolio" >
-          <FaCode className={`${styles.codeLink} ${inView ? "fadeIn_center" : ""}`} style={{ margin:10 }} size={55} color={settings.colors.primary} />
+          <FaCode className={`${styles.codeLink} ${inView ? "fadeIn_center" : "hide"}`} style={{ margin:10 }} size={55} color={settings.colors.primary} />
         </a>
       </TouchableOpacity>
       </div>

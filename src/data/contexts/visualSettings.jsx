@@ -20,7 +20,11 @@ export const SettingsContextProvider = (props) =>{
      }))
    
    useEffect(()=>{
-     console.log("settings effect ran");
+     Object.entries( settings.colors ).forEach(([key,val])=>{
+       
+      
+     })
+
    }, [settings] )
    
     return (

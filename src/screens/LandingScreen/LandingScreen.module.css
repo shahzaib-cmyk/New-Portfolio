@@ -42,6 +42,8 @@
   align-self: stretch;
   align-items: center;
   width:clamp(20rem,100%,100rem);
+  /*   This line below was changed BTW  */
+  /*width:clamp(50%,700px,90%);*/
   justify-content: space-evenly;
   padding-inline: var(--margin-main);
   overflow: hidden ;

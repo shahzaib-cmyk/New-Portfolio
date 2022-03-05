@@ -30,6 +30,10 @@
   /*filter:  hue-rotate(180deg)  ;*/
   
 }
+.container_closed{
+  animation: fadeOut 0.5s forwards;
+  pointer-events: none ;
+}
 
 .link{
   display: flex;
@@ -48,9 +52,11 @@
  /* letter-spacing: .5em;*/
  
   background: transparent;
-  transition: all 0.5s ease-in-out;
+  transition: opacity 0.5s ease;
   
   text-shadow: 0px 3px 5px black;
+  opacity: 0;
+  
 }
 .link::before{
   content: attr(name) ;
@@ -82,6 +88,15 @@
   opacity: 1;
   
 }
+
+.link_open{
+  transform:  translateY(0);
+  opacity: 1;
+}
+.link_closed{
+  transform:  translateY(100%);
+  opacity: 0;
+}
 .linkBtn{
   background: transparent;
   
@@ -110,11 +125,17 @@
  */
  to{
    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-
 }
 }
 
-
+@keyframes fadeOut {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
 @media (min-width:60em) { 
   .container{
     padding-block: 0px;

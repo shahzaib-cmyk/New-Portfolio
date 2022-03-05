@@ -19,7 +19,7 @@ function Nav(props) {
     style,
     links=[],
   } = props;
-  const [ brgColor , setBrgColor ] = useState(()=>"white");
+  
   const [ navOpen , setNavOpen ] = useState(()=>false);
   const isMobile = useCheckMobileScreen();
   
@@ -35,7 +35,7 @@ function Nav(props) {
         onPress={link=>console.log(link)}
         renderItem={(link,i,{key})=><Button key={key} className="link" onClickAnimation="bounce opacity" >{link}</Button>}
     />
-    <BurgerMenuToggle onChange={state=>setNavOpen(p=>state)} style={Styles.brgMenu} lineColor={brgColor} className={"brgMenu"} />
+    <BurgerMenuToggle onChange={state=>setNavOpen(p=>state)} style={Styles.brgMenu}  lineColor={"white"}  className={"brgMenu"} />
     <MobileNavigationScreen isNavOpen={navOpen} links={links} />
 
     </>
