@@ -2,7 +2,6 @@ import styles from './ContactScreen.module.css';
 import { DiagonalBgText } from "components/basic";
 import { useCallback, } from "react";
 import { useInView } from 'react-intersection-observer';
-import MapImage from "assets/mapImage.jpg";
 import {
   Button,
 } from "utils/components"
