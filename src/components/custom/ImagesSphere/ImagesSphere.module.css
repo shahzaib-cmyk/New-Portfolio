@@ -1,0 +1,63 @@
+
+.container{
+  position: relative;
+  min-height: 50vh ;
+  flex:1;
+  align-self: stretch ;
+}
+
+
+
+
+
+.images{
+  border-radius: 50%;
+  max-width : 100% ;
+  position: absolute;
+  aspect-ratio: 1/1;
+  box-shadow: inset 0px 0px 50px 50px var(--clr-primary),
+              0px 0px 10px 5px var(--clr-accent);
+  
+  border-radius: 100%;
+  background-image: radial-gradient(var(--clr-accent),transparent 55%);
+  
+  max-height: 5rem;
+  transition: transform 2.25s ease;
+}
+
+
+
+
+@keyframes move {
+ from{
+   transform: translate();
+  }
+  to{
+   transform: translate();
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
