@@ -1,5 +1,5 @@
 import styles from "./MobileNavigationScreen.module.css";
-import { memo, useEffect, useState } from "react";
+import { memo, useEffect, useCallback, useState } from "react";
 import { v4 as uuidv4} from "uuid";
 import {
   Button,
@@ -19,21 +19,22 @@ function MobileNavigationScreen({
     isNavOpen,
   ...rest
 }) {
+  /*
   const [ visible, setVisible ] = useState(()=>isNavOpen);
   
   
   useEffect(() => {
-    /* if(isNavOpen){
+    if(isNavOpen){
        setVisible(p=>true);
        /// In Animation stuff
      }
      else if (!isNavOpen) {
        /// Out Animation stuff
        setVisible(p=>false);
-     }*/
-     setVisible(p=>isNavOpen)
+     }
+     
   } , [ isNavOpen ] )
-  
+  */
   //if (!visible) return null;
     
   return (
@@ -43,23 +44,28 @@ function MobileNavigationScreen({
     >
     { links.map((link,index)=>{
 
-       console.log(`visible : ${isNavOpen}`);
-       function scrollTo(i){
+       
+       const scrollTo = ()=>{
           window.location.hash=link;
        }
        
        return (
+         <div 
+           key={uuidv4()} 
+           style={{
+              opacity:0,
+              animationDelay:(((index+1)*100)+150)+"ms",
+           }}
+           className={`${styles.cover} fadeIn_bottom`} >
          <Button 
             onClick={()=>scrollTo(index)}
             name={link} 
             onClickAnimation="opacity" 
-            style={{
-              animationDelay:(((index+1)*50)+150)+"ms"
-            }}
-            className={`fadeIn_bottom ${styles.link} ${""/*isNavOpen ? styles.link_open : styles.link_closed */}`} 
+            className={`${styles.link}`} 
             key={uuidv4()} >
            {link} 
          </Button>
+         </div>
        )
     }) }
     <div className={styles.socialLinksContainer} >

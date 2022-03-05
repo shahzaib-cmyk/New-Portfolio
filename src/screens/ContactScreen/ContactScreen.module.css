@@ -68,7 +68,7 @@
   transition-delay: 0.25s;
   transform-origin: left;
   
-  backdrop-filter: blur(2.5px);
+ /* backdrop-filter: blur(2.5px);*/
   
 }
 .column2{
