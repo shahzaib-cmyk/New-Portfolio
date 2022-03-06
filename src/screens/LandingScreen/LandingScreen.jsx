@@ -22,7 +22,7 @@ import {
 import {
   DiagonalBgText,
 } from "components/basic"
-import portrait from "assets/portraitPicSquare.png"
+import portrait from "assets/selfPic.png"
 import {
   ImagesSphere,
 } from "components/custom"
@@ -46,12 +46,12 @@ function LandingScreen(props) {
             I'm <br /> Shahzaib Khan</h1>
             <p className={`${styles.paras} fadeIn_bottom`} >I Design and Develop Beautifull Animated <br />Web Experiences</p>
           </div>
-          
+          {/*
           <div className={`${styles.imgContainer} fadeIn_center`}   >   
             <img className={styles.image} src={portrait} />
           </div>
-          
-         {/* <ImagesSphere /> */}
+          */}
+           <ImagesSphere /> 
           </div>
     </section>
   );

@@ -35,7 +35,7 @@ function MobileNavigationScreen({
      
   } , [ isNavOpen ] )
   */
-  //if (!visible) return null;
+  //if (!isNavOpen) return null;
     
   return (
     <div 
